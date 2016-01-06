@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_TITLEMANAGER</name>
+	<author>Lyquix (original by Ercan Özkaya)</author>
+	<creationDate>January 2016</creationDate>
+	<copyright>(C) 2016 Lyquix. All rights reserved.</copyright>
+	<license>GNU/GPL http://www.gnu.org/licenses/gpl.html</license>
+	<authorEmail>info@lyquix.com</authorEmail>
+	<authorUrl>http://www.lyquix.com/</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_SYSTEM_TITLEMANAGER_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="titlemanager">titlemanager.php</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.plg_system_titlemanager.ini</language>
+		<language tag="en-GB">en-GB.plg_system_titlemanager.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="spacer" name="sitename-spacer" label="PLG_SYSTEM_TITLEMANAGER_SITENAME_PARAMETERS" />
+				<field name="sitename_mode" type="radio" default="0" label="PLG_SYSTEM_TITLEMANAGER_SITENAME_MODE" description="PLG_SYSTEM_TITLEMANAGER_SITENAME_MODE_DESC">
+					<option value="0">PLG_SYSTEM_TITLEMANAGER_SITENAME_MODE_GLOBAL</option>
+					<option value="1">PLG_SYSTEM_TITLEMANAGER_SITENAME_MODE_OVERRIDE</option>
+				</field>
+				<field name="sitename_override" type="text" default="" label="PLG_SYSTEM_TITLEMANAGER_SITENAME_OVERRIDE" description="PLG_SYSTEM_TITLEMANAGER_SITENAME_OVERRIDE_DESC" />
+				
+				<field type="spacer" name="titlesetup-spacer" label="PLG_SYSTEM_TITLEMANAGER_TITLE_PARAMETERS" />
+				<field name="ordering" type="radio" default="after" label="PLG_SYSTEM_TITLEMANAGER_ORDERING" description="PLG_SYSTEM_TITLEMANAGER_ORDERING_DESC">
+					<option value="after">PLG_SYSTEM_TITLEMANAGER_AFTER</option>
+					<option value="before">PLG_SYSTEM_TITLEMANAGER_BEFORE</option>
+				</field>
+				<field name="separator" type="text" default=" - " label="PLG_SYSTEM_TITLEMANAGER_SEPARATOR" description="PLG_SYSTEM_TITLEMANAGER_SEPARATOR_DESC" filter="raw" />
+				
+				<field type="spacer" name="homepage-spacer" label="PLG_SYSTEM_TITLEMANAGER_HOMEPAGE_PARAMETERS" />
+				<field name="homepage_mode" type="radio" default="sitename" label="PLG_SYSTEM_TITLEMANAGER_HOMEPAGE_MODE" description="PLG_SYSTEM_TITLEMANAGER_HOMEPAGE_MODE_DESC">
+					<option value="default">PLG_SYSTEM_TITLEMANAGER_HOMEPAGE_MODE_DEFAULT</option>
+					<option value="sitename">PLG_SYSTEM_TITLEMANAGER_HOMEPAGE_MODE_SITENAME</option>
+					<option value="override">PLG_SYSTEM_TITLEMANAGER_HOMEPAGE_MODE_OVERRIDE</option>
+				</field>
+				<field name="homepage_override" type="text" default="" label="PLG_SYSTEM_TITLEMANAGER_HOMEPAGE_OVERRIDE" description="PLG_SYSTEM_TITLEMANAGER_HOMEPAGE_OVERRIDE_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
