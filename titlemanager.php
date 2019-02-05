@@ -28,7 +28,7 @@ class plgSystemTitlemanager extends JPlugin {
 		$params = $this -> params;
 		$document = JFactory::getDocument();
 		$menu = $app -> getMenu();
-		$is_homepage = ($menu -> getActive() == $menu -> getDefault());
+		$is_homepage = ($menu -> getActive() == $menu -> getDefault($menu->getActive()->language));
 
 		// Set the site name (global config or override)
 		$sitename = $params -> get('sitename_mode', 0) ? $params -> get('sitename_override') : $app -> getCfg('sitename');
